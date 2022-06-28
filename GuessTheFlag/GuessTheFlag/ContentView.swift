@@ -12,7 +12,10 @@ struct ContentView: View {
     @State private var correctAnswer = Int.random(in: 0...2)
     
     @State private var showingScore = false
+    @State private var endOfGame = false
     @State private var scoreTitle = ""
+    @State private var score = 0
+    @State private var gameNumber = 0
     
     var body: some View {
         ZStack {
@@ -57,7 +60,7 @@ struct ContentView: View {
                 Spacer()
                 Spacer()
                 
-                Text("Score: ???")
+                Text("Score: \(score)")
                     .foregroundColor(.white)
                     .font(.title.bold())
                 
@@ -69,26 +72,48 @@ struct ContentView: View {
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
             } message: {
-                Text("Your score is ???")
+                Text("Your score is \(score)")
+            }
+        
+        .alert("Game Over", isPresented: $endOfGame) {
+            Button("OK", action: reset)
+            Button("Cancel", role: .cancel) { }
+            } message: {
+                    Text("Your score was \(score), play again?")
             }
     }
     
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
             scoreTitle = "Correct"
+            score += 1
         }
         else {
-            scoreTitle = "Wrong"
+            scoreTitle = "Wrong, that is \(countries[number])s flag"
+        }
+                
+        if gameNumber < 7 {
+            showingScore = true
+        }
+        else {
+            showingScore = true
+            endOfGame = true
         }
         
-        showingScore = true
+        gameNumber += 1
     }
     
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
-        
     }
+    
+    func reset() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+        score = 0
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
