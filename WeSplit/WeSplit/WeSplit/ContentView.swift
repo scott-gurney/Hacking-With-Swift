@@ -32,6 +32,14 @@ struct ContentView: View {
         return amountPerPerson
     }
     
+    var zeroTipSelected: Bool {
+        if tipPercentage == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -65,6 +73,7 @@ struct ContentView: View {
                 
                 Section {
                     Text(grandTotal, format: currencyFormat)
+                        .foregroundColor(zeroTipSelected ? .red : .primary)
                 } header: {
                     Text("Total inc Tip")
                 }
