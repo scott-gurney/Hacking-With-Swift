@@ -27,7 +27,11 @@ struct ContentView: View {
     @State private var endOfGame = false
     @State private var scoreTitle = ""
     @State private var score = 0
-    @State private var gameNumber = 0    
+    @State private var gameNumber = 0
+    
+    @State private var rotationDegrees = [0.0, 0.0, 0.0]
+    @State private var opacityLevel = [1.0, 1.0, 1.0]
+    @State private var correctFlag = [false, false, false]
     
     var body: some View {
         ZStack {
@@ -55,10 +59,20 @@ struct ContentView: View {
                     }
                     ForEach(0..<3) { number in
                         Button {
-                            flagTapped(number)
+                            withAnimation() {
+                                flagTapped(number)
+                                rotationDegrees[number] = 360.0
+                                opacityLevel[number == 0 ? 1: number == 1 ? 2: 0] = 1.75
+                                opacityLevel[number == 0 ? 2: number == 1 ? 0: 1] = 1.75
+                                opacityLevel[number == correctAnswer ? number : correctAnswer] = 0.0
+                                correctFlag[number == correctAnswer ? number : correctAnswer] = true
+                            }
                         } label: {
                             FlagImage(flags: countries, number: number)
                         }
+                        .rotation3DEffect(.degrees(rotationDegrees[number]), axis: (x: 0, y: 1, z: 0))
+                        .opacity(2 - opacityLevel[number])
+                        .scaleEffect(correctFlag[number] ? 1.5 : 1)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -77,7 +91,7 @@ struct ContentView: View {
             }
             .padding()
         }
-        
+                
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
             } message: {
@@ -113,13 +127,18 @@ struct ContentView: View {
     }
     
     func askQuestion() {
-        countries.shuffle()
-        correctAnswer = Int.random(in: 0...2)
+        withAnimation {
+            countries.shuffle()
+            correctAnswer = Int.random(in: 0...2)
+            opacityLevel = [1.0, 1.0, 1.0]
+            correctFlag = [false, false, false]
+        }
+        rotationDegrees = [0.0, 0.0, 0.0]
     }
     
     func reset() {
-        countries.shuffle()
-        correctAnswer = Int.random(in: 0...2)
+        askQuestion()
+        gameNumber = 0
         score = 0
     }
     
