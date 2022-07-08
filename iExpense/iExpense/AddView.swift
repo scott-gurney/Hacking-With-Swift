@@ -15,6 +15,7 @@ struct AddView: View {
     let types = ["Personal", "Business"]
     
     @ObservedObject var expenses: Expenses
+    @ObservedObject var businessExpenses: Expenses
     
     @Environment(\.dismiss) var dismiss
     
@@ -30,7 +31,7 @@ struct AddView: View {
                 }
                 .pickerStyle(.segmented)
                 
-                TextField("Amount", value: $amount, format: .currency(code: "USD"))
+                TextField("Amount", value: $amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Add new expense")
@@ -38,7 +39,13 @@ struct AddView: View {
             .toolbar {
                 Button("Save") {
                     let expense = ExpenseItem(name: name, type: type, amount: amount)
-                    expenses.items.append(expense)
+                    
+                    if(expense.type == "Personal") {
+                        expenses.items.append(expense)
+                    }
+                    else {
+                        businessExpenses.items.append(expense)
+                    }
                     dismiss()
                 }
             }
@@ -48,6 +55,6 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView(expenses: Expenses())
+        AddView(expenses: Expenses(), businessExpenses: Expenses())
     }
 }
