@@ -17,7 +17,7 @@ struct ContentView: View {
             List {
                 ForEach(habits.items) { habit in
                     NavigationLink {
-                        HabitDetail(habit: habit.self)
+                        HabitDetail(habit: habit.self, habits: habits)
                     } label: {
                         HStack {
                             VStack(alignment: .leading) {
@@ -28,10 +28,8 @@ struct ContentView: View {
                         
                         Spacer()
                         
-                        VStack(alignment: .leading) {
-                            Text("Streak: \(habit.value)")
-                            Text("Best ⭐️: \(habit.value)")
-                        }
+                        Text("Streak: \(habit.value)")
+                        
                     }
                     .foregroundColor(.black)
                     .padding(.vertical)
@@ -61,6 +59,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }
