@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct CheckoutView: View {
-    @ObservedObject var order: Order
+    @State var orderItem: Order
     
     @State private var showingConfirmation = false
     @State private var confirmationMessage = ""
+    
+    @State private var showingError = false
+
     
     var body: some View {
         ScrollView {
@@ -25,7 +28,7 @@ struct CheckoutView: View {
                 }
                 .frame(height: 233)
                 
-                Text("Your total is \(order.cost, format: .currency(code: "USD"))")
+                Text("Your total is \(orderItem.cost, format: .currency(code: "USD"))")
                     .font(.title)
                 
                 Button("Place order") {
@@ -44,10 +47,16 @@ struct CheckoutView: View {
         } message: {
             Text(confirmationMessage)
         }
+        
+        .alert("ERROR", isPresented: $showingError) {
+            Button("Dismiss") { }
+        } message: {
+            Text("You do not have an internet connection")
+        }
     }
     
     func placeOrder() async {
-        guard let encoded = try? JSONEncoder().encode(order) else {
+        guard let encoded = try? JSONEncoder().encode(orderItem) else {
             print("Failed to encode order")
             return
         }
@@ -65,6 +74,7 @@ struct CheckoutView: View {
             showingConfirmation = true
             
         } catch {
+            showingError = true
             print("Checkout failed")
         }
     }
@@ -72,6 +82,6 @@ struct CheckoutView: View {
 
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutView(order: Order())
+        CheckoutView(orderItem: Order())
     }
 }
