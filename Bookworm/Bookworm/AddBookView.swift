@@ -43,23 +43,39 @@ struct AddBookView: View {
                 
                 Section {
                     Button("Save") {
-                        let newBook = Book(context: moc)
-                        
-                        newBook.id = UUID()
-                        newBook.title = title
-                        newBook.author = author
-                        newBook.genre = genre
-                        newBook.review = review
-                        newBook.rating = Int16(rating)
-                        
+                        createBook()
                         try? moc.save()
                         dismiss()
                     }
+                    .disabled(validateBook() == false)
                 }
             }
             .navigationTitle("Add Book")
         }
     }
+    
+    func createBook() {
+        let newBook = Book(context: moc)
+        
+        newBook.id = UUID()
+        newBook.title = title
+        newBook.author = author
+        newBook.genre = genre
+        newBook.review = review
+        newBook.rating = Int16(rating)
+        newBook.date = Date.now
+}
+    
+    func validateBook() -> Bool {
+        if title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ||
+            genre.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ||
+            review.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return false
+        } else {
+            return true
+        }
+    }
+    
 }
 
 struct AddBookView_Previews: PreviewProvider {

@@ -35,12 +35,15 @@ struct DetailView: View {
             Text(book.author ?? "Unknown author")
                 .font(.title)
                 .foregroundColor(.secondary)
-            
-            Text(book.review ?? "No reviw")
+                        
+            Text(book.review ?? "No review")
                 .padding()
             
             RatingView(rating: .constant(Int(book.rating)))
                 .font(.largeTitle)
+            
+            Text("Reviewed on \(book.date?.formatted(date: .long, time: .omitted) ?? "unknown date")")
+                .padding(.top)
             
             .navigationTitle(book.title ?? "Unknown Book")
             .navigationBarTitleDisplayMode(.inline)

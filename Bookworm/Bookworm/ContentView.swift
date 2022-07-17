@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+struct BookTitle: View {
+    var bookTitle: String
+    var reviewScore: Int
+    
+    var body: some View {
+        if(reviewScore > 1) {
+            Text(bookTitle)
+                .font(.headline)
+        } else {
+            Text(bookTitle)
+                .font(.headline)
+                .foregroundColor(.red)
+        }
+            
+    }
+}
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [
@@ -28,8 +45,7 @@ struct ContentView: View {
                                 .font(.largeTitle)
                             
                             VStack(alignment: .leading) {
-                                Text(book.title ?? "Unknown Title")
-                                    .font(.headline)
+                                BookTitle(bookTitle: book.title ?? "Unknown Book", reviewScore: Int(book.rating))
                                 Text(book.author ?? "Unknown Author")
                                     .foregroundColor(.secondary)
                             }
