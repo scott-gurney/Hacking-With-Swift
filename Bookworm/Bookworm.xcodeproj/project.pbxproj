@@ -14,6 +14,7 @@
 		BEE404F82884635A0077ECAE /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE404F72884635A0077ECAE /* DataController.swift */; };
 		BEE404FB288463F50077ECAE /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEE404F9288463F50077ECAE /* Bookworm.xcdatamodeld */; };
 		BEE404FD288466170077ECAE /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE404FC288466170077ECAE /* AddBookView.swift */; };
+		BEE404FF28846BEC0077ECAE /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE404FE28846BEC0077ECAE /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		BEE404F72884635A0077ECAE /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BEE404FA288463F50077ECAE /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
 		BEE404FC288466170077ECAE /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		BEE404FE28846BEC0077ECAE /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,10 +59,11 @@
 		BEE404E8288462D90077ECAE /* Bookworm */ = {
 			isa = PBXGroup;
 			children = (
-				BEE404E9288462D90077ECAE /* BookwormApp.swift */,
 				BEE404FC288466170077ECAE /* AddBookView.swift */,
+				BEE404E9288462D90077ECAE /* BookwormApp.swift */,
 				BEE404EB288462D90077ECAE /* ContentView.swift */,
 				BEE404F72884635A0077ECAE /* DataController.swift */,
+				BEE404FE28846BEC0077ECAE /* RatingView.swift */,
 				BEE404F9288463F50077ECAE /* Bookworm.xcdatamodeld */,
 				BEE404ED288462DA0077ECAE /* Assets.xcassets */,
 				BEE404EF288462DA0077ECAE /* Preview Content */,
@@ -149,6 +152,7 @@
 				BEE404EC288462D90077ECAE /* ContentView.swift in Sources */,
 				BEE404FB288463F50077ECAE /* Bookworm.xcdatamodeld in Sources */,
 				BEE404F82884635A0077ECAE /* DataController.swift in Sources */,
+				BEE404FF28846BEC0077ECAE /* RatingView.swift in Sources */,
 				BEE404EA288462D90077ECAE /* BookwormApp.swift in Sources */,
 				BEE404FD288466170077ECAE /* AddBookView.swift in Sources */,
 			);
