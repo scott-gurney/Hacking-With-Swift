@@ -12,6 +12,9 @@
 		BE6B84F028873B4E000711BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6B84EF28873B4E000711BF /* Assets.xcassets */; };
 		BE6B84F328873B4E000711BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6B84F228873B4E000711BF /* Preview Assets.xcassets */; };
 		BE6B84FA28873C07000711BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84F928873C07000711BF /* User.swift */; };
+		BE6B84FC28873D99000711BF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84FB28873D99000711BF /* Friend.swift */; };
+		BE6B84FE28873E2F000711BF /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84FD28873E2F000711BF /* Users.swift */; };
+		BE6B850028874B89000711BF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84FF28874B89000711BF /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		BE6B84EF28873B4E000711BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE6B84F228873B4E000711BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE6B84F928873C07000711BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BE6B84FB28873D99000711BF /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		BE6B84FD28873E2F000711BF /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		BE6B84FF28874B89000711BF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,10 @@
 			children = (
 				BE6B84EB28873B4C000711BF /* FriendFaceApp.swift */,
 				BE6B84ED28873B4C000711BF /* ContentView.swift */,
+				BE6B84FF28874B89000711BF /* DetailView.swift */,
 				BE6B84F928873C07000711BF /* User.swift */,
+				BE6B84FD28873E2F000711BF /* Users.swift */,
+				BE6B84FB28873D99000711BF /* Friend.swift */,
 				BE6B84EF28873B4E000711BF /* Assets.xcassets */,
 				BE6B84F128873B4E000711BF /* Preview Content */,
 			);
@@ -141,8 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE6B84EE28873B4C000711BF /* ContentView.swift in Sources */,
+				BE6B850028874B89000711BF /* DetailView.swift in Sources */,
 				BE6B84EC28873B4C000711BF /* FriendFaceApp.swift in Sources */,
+				BE6B84FE28873E2F000711BF /* Users.swift in Sources */,
 				BE6B84FA28873C07000711BF /* User.swift in Sources */,
+				BE6B84FC28873D99000711BF /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
