@@ -7,30 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE9CDFEA28818D8F0072FD06 /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9CDFE928818D8F0072FD06 /* CupcakeCornerApp.swift */; };
-		BE9CDFEC28818D8F0072FD06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9CDFEB28818D8F0072FD06 /* ContentView.swift */; };
-		BE9CDFEE28818D950072FD06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9CDFED28818D950072FD06 /* Assets.xcassets */; };
-		BE9CDFF128818D950072FD06 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9CDFF028818D950072FD06 /* Preview Assets.xcassets */; };
-		BEDD123C28818E9900027DC9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDD123B28818E9900027DC9 /* Order.swift */; };
-		BEDD123E288191A900027DC9 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDD123D288191A900027DC9 /* AddressView.swift */; };
-		BEDD1240288194B900027DC9 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDD123F288194B900027DC9 /* CheckoutView.swift */; };
-		BEDD12422881A6A400027DC9 /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDD12412881A6A400027DC9 /* OrderItem.swift */; };
+		BE6B84EC28873B4C000711BF /* FriendFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84EB28873B4C000711BF /* FriendFaceApp.swift */; };
+		BE6B84EE28873B4C000711BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84ED28873B4C000711BF /* ContentView.swift */; };
+		BE6B84F028873B4E000711BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6B84EF28873B4E000711BF /* Assets.xcassets */; };
+		BE6B84F328873B4E000711BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6B84F228873B4E000711BF /* Preview Assets.xcassets */; };
+		BE6B84FA28873C07000711BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84F928873C07000711BF /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE9CDFE628818D8F0072FD06 /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE9CDFE928818D8F0072FD06 /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
-		BE9CDFEB28818D8F0072FD06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BE9CDFED28818D950072FD06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BE9CDFF028818D950072FD06 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BEDD123B28818E9900027DC9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		BEDD123D288191A900027DC9 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
-		BEDD123F288194B900027DC9 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
-		BEDD12412881A6A400027DC9 /* OrderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		BE6B84E828873B4C000711BF /* FriendFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE6B84EB28873B4C000711BF /* FriendFaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFaceApp.swift; sourceTree = "<group>"; };
+		BE6B84ED28873B4C000711BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE6B84EF28873B4E000711BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE6B84F228873B4E000711BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE6B84F928873C07000711BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BE9CDFE328818D8F0072FD06 /* Frameworks */ = {
+		BE6B84E528873B4C000711BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,41 +34,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE9CDFDD28818D8F0072FD06 = {
+		BE6B84DF28873B4C000711BF = {
 			isa = PBXGroup;
 			children = (
-				BE9CDFE828818D8F0072FD06 /* CupcakeCorner */,
-				BE9CDFE728818D8F0072FD06 /* Products */,
+				BE6B84EA28873B4C000711BF /* FriendFace */,
+				BE6B84E928873B4C000711BF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BE9CDFE728818D8F0072FD06 /* Products */ = {
+		BE6B84E928873B4C000711BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE9CDFE628818D8F0072FD06 /* CupcakeCorner.app */,
+				BE6B84E828873B4C000711BF /* FriendFace.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE9CDFE828818D8F0072FD06 /* CupcakeCorner */ = {
+		BE6B84EA28873B4C000711BF /* FriendFace */ = {
 			isa = PBXGroup;
 			children = (
-				BE9CDFE928818D8F0072FD06 /* CupcakeCornerApp.swift */,
-				BEDD123D288191A900027DC9 /* AddressView.swift */,
-				BEDD123F288194B900027DC9 /* CheckoutView.swift */,
-				BE9CDFEB28818D8F0072FD06 /* ContentView.swift */,
-				BEDD123B28818E9900027DC9 /* Order.swift */,
-				BEDD12412881A6A400027DC9 /* OrderItem.swift */,
-				BE9CDFED28818D950072FD06 /* Assets.xcassets */,
-				BE9CDFEF28818D950072FD06 /* Preview Content */,
+				BE6B84EB28873B4C000711BF /* FriendFaceApp.swift */,
+				BE6B84ED28873B4C000711BF /* ContentView.swift */,
+				BE6B84F928873C07000711BF /* User.swift */,
+				BE6B84EF28873B4E000711BF /* Assets.xcassets */,
+				BE6B84F128873B4E000711BF /* Preview Content */,
 			);
-			path = CupcakeCorner;
+			path = FriendFace;
 			sourceTree = "<group>";
 		};
-		BE9CDFEF28818D950072FD06 /* Preview Content */ = {
+		BE6B84F128873B4E000711BF /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				BE9CDFF028818D950072FD06 /* Preview Assets.xcassets */,
+				BE6B84F228873B4E000711BF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -82,39 +73,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE9CDFE528818D8F0072FD06 /* CupcakeCorner */ = {
+		BE6B84E728873B4C000711BF /* FriendFace */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE9CDFF428818D950072FD06 /* Build configuration list for PBXNativeTarget "CupcakeCorner" */;
+			buildConfigurationList = BE6B84F628873B4E000711BF /* Build configuration list for PBXNativeTarget "FriendFace" */;
 			buildPhases = (
-				BE9CDFE228818D8F0072FD06 /* Sources */,
-				BE9CDFE328818D8F0072FD06 /* Frameworks */,
-				BE9CDFE428818D8F0072FD06 /* Resources */,
+				BE6B84E428873B4C000711BF /* Sources */,
+				BE6B84E528873B4C000711BF /* Frameworks */,
+				BE6B84E628873B4C000711BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CupcakeCorner;
-			productName = CupcakeCorner;
-			productReference = BE9CDFE628818D8F0072FD06 /* CupcakeCorner.app */;
+			name = FriendFace;
+			productName = FriendFace;
+			productReference = BE6B84E828873B4C000711BF /* FriendFace.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BE9CDFDE28818D8F0072FD06 /* Project object */ = {
+		BE6B84E028873B4C000711BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					BE9CDFE528818D8F0072FD06 = {
+					BE6B84E728873B4C000711BF = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = BE9CDFE128818D8F0072FD06 /* Build configuration list for PBXProject "CupcakeCorner" */;
+			buildConfigurationList = BE6B84E328873B4C000711BF /* Build configuration list for PBXProject "FriendFace" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,46 +113,43 @@
 				en,
 				Base,
 			);
-			mainGroup = BE9CDFDD28818D8F0072FD06;
-			productRefGroup = BE9CDFE728818D8F0072FD06 /* Products */;
+			mainGroup = BE6B84DF28873B4C000711BF;
+			productRefGroup = BE6B84E928873B4C000711BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE9CDFE528818D8F0072FD06 /* CupcakeCorner */,
+				BE6B84E728873B4C000711BF /* FriendFace */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BE9CDFE428818D8F0072FD06 /* Resources */ = {
+		BE6B84E628873B4C000711BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9CDFF128818D950072FD06 /* Preview Assets.xcassets in Resources */,
-				BE9CDFEE28818D950072FD06 /* Assets.xcassets in Resources */,
+				BE6B84F328873B4E000711BF /* Preview Assets.xcassets in Resources */,
+				BE6B84F028873B4E000711BF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BE9CDFE228818D8F0072FD06 /* Sources */ = {
+		BE6B84E428873B4C000711BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEDD123C28818E9900027DC9 /* Order.swift in Sources */,
-				BEDD123E288191A900027DC9 /* AddressView.swift in Sources */,
-				BEDD1240288194B900027DC9 /* CheckoutView.swift in Sources */,
-				BE9CDFEC28818D8F0072FD06 /* ContentView.swift in Sources */,
-				BE9CDFEA28818D8F0072FD06 /* CupcakeCornerApp.swift in Sources */,
-				BEDD12422881A6A400027DC9 /* OrderItem.swift in Sources */,
+				BE6B84EE28873B4C000711BF /* ContentView.swift in Sources */,
+				BE6B84EC28873B4C000711BF /* FriendFaceApp.swift in Sources */,
+				BE6B84FA28873C07000711BF /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BE9CDFF228818D950072FD06 /* Debug */ = {
+		BE6B84F428873B4E000711BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -221,7 +209,7 @@
 			};
 			name = Debug;
 		};
-		BE9CDFF328818D950072FD06 /* Release */ = {
+		BE6B84F528873B4E000711BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -275,14 +263,14 @@
 			};
 			name = Release;
 		};
-		BE9CDFF528818D950072FD06 /* Debug */ = {
+		BE6B84F728873B4E000711BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CupcakeCorner/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FriendFace/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,7 +283,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gurney.scott.CupcakeCorner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurney.scott.FriendFace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -303,14 +291,14 @@
 			};
 			name = Debug;
 		};
-		BE9CDFF628818D950072FD06 /* Release */ = {
+		BE6B84F828873B4E000711BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CupcakeCorner/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FriendFace/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -323,7 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gurney.scott.CupcakeCorner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gurney.scott.FriendFace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -334,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE9CDFE128818D8F0072FD06 /* Build configuration list for PBXProject "CupcakeCorner" */ = {
+		BE6B84E328873B4C000711BF /* Build configuration list for PBXProject "FriendFace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE9CDFF228818D950072FD06 /* Debug */,
-				BE9CDFF328818D950072FD06 /* Release */,
+				BE6B84F428873B4E000711BF /* Debug */,
+				BE6B84F528873B4E000711BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE9CDFF428818D950072FD06 /* Build configuration list for PBXNativeTarget "CupcakeCorner" */ = {
+		BE6B84F628873B4E000711BF /* Build configuration list for PBXNativeTarget "FriendFace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE9CDFF528818D950072FD06 /* Debug */,
-				BE9CDFF628818D950072FD06 /* Release */,
+				BE6B84F728873B4E000711BF /* Debug */,
+				BE6B84F828873B4E000711BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BE9CDFDE28818D8F0072FD06 /* Project object */;
+	rootObject = BE6B84E028873B4C000711BF /* Project object */;
 }
