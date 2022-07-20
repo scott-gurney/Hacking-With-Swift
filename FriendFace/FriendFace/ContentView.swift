@@ -14,10 +14,15 @@ struct ContentView: View {
         NavigationView {
             List(users, id: \.id) { user in
                 NavigationLink(destination: DetailView(user: user)) {
-                    VStack(alignment: .leading) {
-                        Text(user.name)
-                            .font(.headline)
-                        Text(user.company)
+                    HStack {
+                        ActiveView(isActive: user.isActive)
+                            .padding(.trailing)
+                    
+                        VStack(alignment: .leading) {
+                            Text(user.name)
+                                .font(.headline)
+                            Text(user.company)
+                        }
                     }
                 }
             }
@@ -48,7 +53,7 @@ struct ContentView: View {
             }
             
         } catch {
-            print("Invalid data: \(error.localizedDescription ?? "Unknown error")")
+            print("Invalid data")
         }
     }
 }
