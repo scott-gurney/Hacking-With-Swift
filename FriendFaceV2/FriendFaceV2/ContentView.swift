@@ -26,6 +26,9 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("FriendFace")
+            .task {
+                await fetchUsers()
+            }
         }
     }
     
