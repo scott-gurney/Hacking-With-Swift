@@ -11,6 +11,8 @@
 		BE443942288AD0F600E5AFF8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE443941288AD0F600E5AFF8 /* ContentView.swift */; };
 		BE443944288AD0F800E5AFF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE443943288AD0F800E5AFF8 /* Assets.xcassets */; };
 		BE443947288AD0F800E5AFF8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE443946288AD0F800E5AFF8 /* Preview Assets.xcassets */; };
+		BE44394E288AD13700E5AFF8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44394D288AD13700E5AFF8 /* User.swift */; };
+		BE443950288AD1BA00E5AFF8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44394F288AD1BA00E5AFF8 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		BE443941288AD0F600E5AFF8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE443943288AD0F800E5AFF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE443946288AD0F800E5AFF8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE44394D288AD13700E5AFF8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BE44394F288AD1BA00E5AFF8 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				BE44393F288AD0F600E5AFF8 /* FriendFaceV2App.swift */,
 				BE443941288AD0F600E5AFF8 /* ContentView.swift */,
+				BE44394D288AD13700E5AFF8 /* User.swift */,
+				BE44394F288AD1BA00E5AFF8 /* Friend.swift */,
 				BE443943288AD0F800E5AFF8 /* Assets.xcassets */,
 				BE443945288AD0F800E5AFF8 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				BE443942288AD0F600E5AFF8 /* ContentView.swift in Sources */,
 				BE443940288AD0F600E5AFF8 /* FriendFaceV2App.swift in Sources */,
+				BE44394E288AD13700E5AFF8 /* User.swift in Sources */,
+				BE443950288AD1BA00E5AFF8 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
