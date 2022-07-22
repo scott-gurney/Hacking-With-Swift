@@ -43,6 +43,11 @@ struct ContentView: View {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
             users = try decoder.decode([User].self, from: data)
+            
+            await MainActor.run {
+                updateCache(with: users)
+            }
+            
         } catch {
             print("Download failed")
         }
