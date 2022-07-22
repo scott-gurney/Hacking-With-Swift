@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var users = [User]()
+//    @State private var users = [User]()
     @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var users: FetchedResults<CachedUser>
     
     var body: some View {
         NavigationView {
@@ -22,7 +23,7 @@ struct ContentView: View {
                             .fill(user.isActive ? .green : .red)
                             .frame(width: 30)
                         
-                        Text(user.name)
+                        Text(user.wrappedName)
                     }
                 }
             }
@@ -42,7 +43,7 @@ struct ContentView: View {
             
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
-            users = try decoder.decode([User].self, from: data)
+            let users = try decoder.decode([User].self, from: data)
             
             await MainActor.run {
                 updateCache(with: users)
