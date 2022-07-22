@@ -13,9 +13,14 @@
 		BE6B84F328873B4E000711BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6B84F228873B4E000711BF /* Preview Assets.xcassets */; };
 		BE6B84FA28873C07000711BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84F928873C07000711BF /* User.swift */; };
 		BE6B84FC28873D99000711BF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84FB28873D99000711BF /* Friend.swift */; };
-		BE6B84FE28873E2F000711BF /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84FD28873E2F000711BF /* Users.swift */; };
 		BE6B850028874B89000711BF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B84FF28874B89000711BF /* DetailView.swift */; };
 		BE6B850228886438000711BF /* ActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B850128886438000711BF /* ActiveView.swift */; };
+		BE6B850F288988EA000711BF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B850E288988EA000711BF /* DataController.swift */; };
+		BE88BDD2288A0BA90076D4D4 /* Friendface.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE88BDD0288A0BA90076D4D4 /* Friendface.xcdatamodeld */; };
+		BE88BDD7288A0C750076D4D4 /* CachedFriend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88BDD3288A0C750076D4D4 /* CachedFriend+CoreDataClass.swift */; };
+		BE88BDD8288A0C750076D4D4 /* CachedFriend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88BDD4288A0C750076D4D4 /* CachedFriend+CoreDataProperties.swift */; };
+		BE88BDD9288A0C750076D4D4 /* CachedUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88BDD5288A0C750076D4D4 /* CachedUser+CoreDataClass.swift */; };
+		BE88BDDA288A0C750076D4D4 /* CachedUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE88BDD6288A0C750076D4D4 /* CachedUser+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +31,14 @@
 		BE6B84F228873B4E000711BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE6B84F928873C07000711BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE6B84FB28873D99000711BF /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
-		BE6B84FD28873E2F000711BF /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		BE6B84FF28874B89000711BF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		BE6B850128886438000711BF /* ActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveView.swift; sourceTree = "<group>"; };
+		BE6B850E288988EA000711BF /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		BE88BDD1288A0BA90076D4D4 /* Friendface.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Friendface.xcdatamodel; sourceTree = "<group>"; };
+		BE88BDD3288A0C750076D4D4 /* CachedFriend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BE88BDD4288A0C750076D4D4 /* CachedFriend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		BE88BDD5288A0C750076D4D4 /* CachedUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BE88BDD6288A0C750076D4D4 /* CachedUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +71,18 @@
 		BE6B84EA28873B4C000711BF /* FriendFace */ = {
 			isa = PBXGroup;
 			children = (
+				BE88BDD3288A0C750076D4D4 /* CachedFriend+CoreDataClass.swift */,
+				BE88BDD4288A0C750076D4D4 /* CachedFriend+CoreDataProperties.swift */,
+				BE88BDD5288A0C750076D4D4 /* CachedUser+CoreDataClass.swift */,
+				BE88BDD6288A0C750076D4D4 /* CachedUser+CoreDataProperties.swift */,
 				BE6B84EB28873B4C000711BF /* FriendFaceApp.swift */,
-				BE6B84ED28873B4C000711BF /* ContentView.swift */,
 				BE6B850128886438000711BF /* ActiveView.swift */,
+				BE6B84ED28873B4C000711BF /* ContentView.swift */,
+				BE6B850E288988EA000711BF /* DataController.swift */,
 				BE6B84FF28874B89000711BF /* DetailView.swift */,
-				BE6B84F928873C07000711BF /* User.swift */,
-				BE6B84FD28873E2F000711BF /* Users.swift */,
 				BE6B84FB28873D99000711BF /* Friend.swift */,
+				BE88BDD0288A0BA90076D4D4 /* Friendface.xcdatamodeld */,
+				BE6B84F928873C07000711BF /* User.swift */,
 				BE6B84EF28873B4E000711BF /* Assets.xcassets */,
 				BE6B84F128873B4E000711BF /* Preview Content */,
 			);
@@ -152,12 +167,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE88BDD7288A0C750076D4D4 /* CachedFriend+CoreDataClass.swift in Sources */,
+				BE88BDD8288A0C750076D4D4 /* CachedFriend+CoreDataProperties.swift in Sources */,
 				BE6B850228886438000711BF /* ActiveView.swift in Sources */,
 				BE6B84EE28873B4C000711BF /* ContentView.swift in Sources */,
+				BE88BDDA288A0C750076D4D4 /* CachedUser+CoreDataProperties.swift in Sources */,
 				BE6B850028874B89000711BF /* DetailView.swift in Sources */,
 				BE6B84EC28873B4C000711BF /* FriendFaceApp.swift in Sources */,
-				BE6B84FE28873E2F000711BF /* Users.swift in Sources */,
 				BE6B84FA28873C07000711BF /* User.swift in Sources */,
+				BE6B850F288988EA000711BF /* DataController.swift in Sources */,
+				BE88BDD9288A0C750076D4D4 /* CachedUser+CoreDataClass.swift in Sources */,
+				BE88BDD2288A0BA90076D4D4 /* Friendface.xcdatamodeld in Sources */,
 				BE6B84FC28873D99000711BF /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +377,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE88BDD0288A0BA90076D4D4 /* Friendface.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE88BDD1288A0BA90076D4D4 /* Friendface.xcdatamodel */,
+			);
+			currentVersion = BE88BDD1288A0BA90076D4D4 /* Friendface.xcdatamodel */;
+			path = Friendface.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BE6B84E028873B4C000711BF /* Project object */;
 }

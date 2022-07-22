@@ -8,32 +8,33 @@
 import SwiftUI
 
 struct DetailView: View {
-    let user: User
+    let user: CachedUser
     
     var body: some View {
         VStack(alignment: .leading) {
             List {
                 Section("Company") {
-                    Text(user.company)
+                    Text(user.wrappedCompany)
                 }
                 
                 Section("Email") {
-                    Text(user.email)
+                    Text(user.wrappedEmail)
                 }
                 
                 Section("About") {
-                    Text(user.about)
+                    Text(user.wrappedAbout)
                 }
                 
                 Section("Friends") {
-                    ForEach(user.friends, id:\.self) { friend in
-                            Text(friend.name)
+                    ForEach(user.friendArray) { friend in
+                            Text(friend.wrappedName)
                     }
                 }
             }
+            .listStyle(.grouped)
             Spacer()
         }
-        .navigationTitle(user.name)
+        .navigationTitle(user.wrappedName)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
