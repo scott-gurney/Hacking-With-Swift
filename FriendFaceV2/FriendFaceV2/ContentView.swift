@@ -11,8 +11,22 @@ struct ContentView: View {
     @State private var users = [User]()
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(users) { user in
+                NavigationLink {
+                    Text(user.name)
+                } label: {
+                    HStack {
+                        Circle()
+                            .fill(user.isActive ? .green : .red)
+                            .frame(width: 30)
+                        
+                        Text(user.name)
+                    }
+                }
+            }
+            .navigationTitle("FriendFace")
+        }
     }
     
     func fetchUsers() async {
