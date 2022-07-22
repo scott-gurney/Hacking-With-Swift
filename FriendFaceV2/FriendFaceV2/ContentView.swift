@@ -14,7 +14,7 @@ struct ContentView: View {
         NavigationView {
             List(users) { user in
                 NavigationLink {
-                    Text(user.name)
+                    UserView(user: user)
                 } label: {
                     HStack {
                         Circle()
