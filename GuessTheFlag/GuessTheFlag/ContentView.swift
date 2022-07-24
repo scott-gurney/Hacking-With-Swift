@@ -29,9 +29,7 @@ struct ContentView: View {
     @State private var score = 0
     @State private var gameNumber = 0
     
-    @State private var rotationDegrees = [0.0, 0.0, 0.0]
-    @State private var opacityLevel = [1.0, 1.0, 1.0]
-    @State private var correctFlag = [false, false, false]
+    @State private var selectedFlag = -1
     
     var body: some View {
         ZStack {
@@ -61,18 +59,14 @@ struct ContentView: View {
                         Button {
                             withAnimation() {
                                 flagTapped(number)
-                                rotationDegrees[number] = 360.0
-                                opacityLevel[number == 0 ? 1: number == 1 ? 2: 0] = 1.75
-                                opacityLevel[number == 0 ? 2: number == 1 ? 0: 1] = 1.75
-                                opacityLevel[number == correctAnswer ? number : correctAnswer] = 0.0
-                                correctFlag[number == correctAnswer ? number : correctAnswer] = true
                             }
                         } label: {
                             FlagImage(flags: countries, number: number)
                         }
-                        .rotation3DEffect(.degrees(rotationDegrees[number]), axis: (x: 0, y: 1, z: 0))
-                        .opacity(2 - opacityLevel[number])
-                        .scaleEffect(correctFlag[number] ? 1.5 : 1)
+                        .rotation3DEffect(.degrees(selectedFlag == number ? 360 : 0), axis: (x: 0, y: 1, z:0))
+                        .opacity(selectedFlag == -1 || selectedFlag == number ? 1.0 : 0.25)
+                        .scaleEffect(selectedFlag == -1 || selectedFlag == number ? 1.0 : 0.25)
+                        .animation(.default, value: selectedFlag)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -107,6 +101,8 @@ struct ContentView: View {
     }
     
     func flagTapped(_ number: Int) {
+        selectedFlag = number
+        
         if number == correctAnswer {
             scoreTitle = "Correct"
             score += 1
@@ -130,10 +126,8 @@ struct ContentView: View {
         withAnimation {
             countries.shuffle()
             correctAnswer = Int.random(in: 0...2)
-            opacityLevel = [1.0, 1.0, 1.0]
-            correctFlag = [false, false, false]
+            selectedFlag = -1
         }
-        rotationDegrees = [0.0, 0.0, 0.0]
     }
     
     func reset() {
