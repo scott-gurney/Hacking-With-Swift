@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE72A530288DC1DD001B1B9B /* FormatStyle-LocalCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72A52F288DC1DD001B1B9B /* FormatStyle-LocalCurrency.swift */; };
+		BE72A532288DC2BE001B1B9B /* View-ExpenseStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72A531288DC2BE001B1B9B /* View-ExpenseStyling.swift */; };
+		BE72A534288DCB65001B1B9B /* ExpenseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72A533288DCB65001B1B9B /* ExpenseSection.swift */; };
 		BEEB31B528783E2D000F3BE4 /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB31B428783E2D000F3BE4 /* iExpenseApp.swift */; };
 		BEEB31B728783E2D000F3BE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEB31B628783E2D000F3BE4 /* ContentView.swift */; };
 		BEEB31B928783E31000F3BE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEEB31B828783E31000F3BE4 /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE72A52F288DC1DD001B1B9B /* FormatStyle-LocalCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormatStyle-LocalCurrency.swift"; sourceTree = "<group>"; };
+		BE72A531288DC2BE001B1B9B /* View-ExpenseStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-ExpenseStyling.swift"; sourceTree = "<group>"; };
+		BE72A533288DCB65001B1B9B /* ExpenseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSection.swift; sourceTree = "<group>"; };
 		BEEB31B128783E2D000F3BE4 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEB31B428783E2D000F3BE4 /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
 		BEEB31B628783E2D000F3BE4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +47,9 @@
 		BEEB31A828783E2D000F3BE4 = {
 			isa = PBXGroup;
 			children = (
+				BE72A533288DCB65001B1B9B /* ExpenseSection.swift */,
+				BE72A531288DC2BE001B1B9B /* View-ExpenseStyling.swift */,
+				BE72A52F288DC1DD001B1B9B /* FormatStyle-LocalCurrency.swift */,
 				BEEB31B328783E2D000F3BE4 /* iExpense */,
 				BEEB31B228783E2D000F3BE4 /* Products */,
 			);
@@ -149,6 +158,9 @@
 				BEEB31C528783F0F000F3BE4 /* Expenses.swift in Sources */,
 				BEEB31B728783E2D000F3BE4 /* ContentView.swift in Sources */,
 				BEEB31C728784519000F3BE4 /* AddView.swift in Sources */,
+				BE72A532288DC2BE001B1B9B /* View-ExpenseStyling.swift in Sources */,
+				BE72A534288DCB65001B1B9B /* ExpenseSection.swift in Sources */,
+				BE72A530288DC1DD001B1B9B /* FormatStyle-LocalCurrency.swift in Sources */,
 				BEEB31C328783E53000F3BE4 /* ExpenseItem.swift in Sources */,
 				BEEB31B528783E2D000F3BE4 /* iExpenseApp.swift in Sources */,
 			);

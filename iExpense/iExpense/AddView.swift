@@ -31,7 +31,7 @@ struct AddView: View {
                 }
                 .pickerStyle(.segmented)
                 
-                TextField("Amount", value: $amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                TextField("Amount", value: $amount, format: .localCurrency)
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Add new expense")
