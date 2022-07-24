@@ -15,6 +15,10 @@ struct ContentView: View {
     
     let currencyFormat = FloatingPointFormatStyle<Double>.Currency.currency(code: Locale.current.currencyCode ?? "USD")
     
+//    Pauls formatting
+//    let currencyFormat: FloatingPointFormatStyle<Double>.Currency = .currency(code: Locale.current.currencyCode ?? "USD")
+
+    
     let tipPercentages = [10, 15, 20, 25, 0]
     
     var grandTotal: Double {
