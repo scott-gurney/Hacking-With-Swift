@@ -11,6 +11,7 @@
 		BE72A5442891C013001B1B9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72A5432891C013001B1B9B /* ContentView.swift */; };
 		BE72A5462891C01B001B1B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE72A5452891C01B001B1B9B /* Assets.xcassets */; };
 		BE72A5492891C01B001B1B9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE72A5482891C01B001B1B9B /* Preview Assets.xcassets */; };
+		BE72A5502891C0FB001B1B9B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE72A54F2891C0FB001B1B9B /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		BE72A5432891C013001B1B9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE72A5452891C01B001B1B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE72A5482891C01B001B1B9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE72A54F2891C0FB001B1B9B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				BE72A5412891C013001B1B9B /* InstafilterApp.swift */,
 				BE72A5432891C013001B1B9B /* ContentView.swift */,
+				BE72A54F2891C0FB001B1B9B /* ImagePicker.swift */,
 				BE72A5452891C01B001B1B9B /* Assets.xcassets */,
 				BE72A5472891C01B001B1B9B /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE72A5502891C0FB001B1B9B /* ImagePicker.swift in Sources */,
 				BE72A5442891C013001B1B9B /* ContentView.swift in Sources */,
 				BE72A5422891C013001B1B9B /* InstafilterApp.swift in Sources */,
 			);
