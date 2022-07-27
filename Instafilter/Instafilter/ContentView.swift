@@ -5,12 +5,18 @@
 //  Created by Scott Gurney on 27/07/2022.
 //
 
+import CoreImage
+import CoreImage.CIFilterBuiltins
 import SwiftUI
 
 struct ContentView: View {
     @State private var image: Image?
     @State private var inputImage: UIImage?
+    
+    @State private var currentFilter = CIFilter.sepiaTone()
+    let context = CIContext()
     @State private var filerIntensity = 0.5
+    
     
     @State private var showingImagePicker = false
     
@@ -36,6 +42,9 @@ struct ContentView: View {
                 HStack {
                     Text("Intensity")
                     Slider(value: $filerIntensity)
+                        .onChange(of: filerIntensity) { _ in
+                            applyProcessing()
+                        }
                 }
                 .padding(.vertical)
                 
@@ -58,14 +67,29 @@ struct ContentView: View {
         }
     }
     
-    func save() {
+    func applyProcessing() {
+        currentFilter.intensity = Float(filerIntensity)
         
+        guard let outputImage = currentFilter.outputImage else { return }
+        
+        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+            let uiImage = UIImage(cgImage: cgimg)
+            image = Image(uiImage: uiImage)
+        }
     }
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
+        
+        let beginImage = CIImage(image: inputImage)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        applyProcessing()
     }
+    
+    func save() {
+        
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
