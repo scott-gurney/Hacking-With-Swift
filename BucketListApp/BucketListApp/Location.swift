@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 
 struct Location: Identifiable, Codable, Equatable {
-    let id: UUID
+    var id: UUID
     var name: String
     var description: String
     var latitude: Double
@@ -19,7 +19,7 @@ struct Location: Identifiable, Codable, Equatable {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
-    static let example = Location(id: UUID(), name: "Buckingham Palace", description: "Where Queen Elizabeth lives her dorgies", latitude: 51.501, longitude: -0.141)
+    static let example = Location(id: UUID(), name: "Buckingham Palace", description: "Where Queen Elizabeth lives with her dorgies", latitude: 51.501, longitude: -0.141)
     
     static func ==(lhs: Location, rhs: Location) -> Bool {
         lhs.id == rhs.id
