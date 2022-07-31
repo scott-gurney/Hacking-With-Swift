@@ -50,13 +50,14 @@ struct ContentView: View {
                             
                         } label: {
                             Image(systemName: "plus")
+                                .padding()
+                                .background(.black.opacity(0.75))
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .clipShape(Circle())
+                                .padding(.trailing)
                         }
-                        .padding()
-                        .background(.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding(.trailing)
+
                     }
                 }
             } else {
@@ -69,6 +70,12 @@ struct ContentView: View {
                 .clipShape(Capsule())
             }
         }
+        .alert(viewModel.alertTitle, isPresented: $viewModel.showingAlert) {
+            Button("Cancel", role: .cancel) { }
+        } message: {
+            Text("\(viewModel.alertMessage)")
+        }
+        
         .sheet(item: $viewModel.selectedPlace) { place in
             EditView(location: place) {
                 viewModel.update(location: $0)

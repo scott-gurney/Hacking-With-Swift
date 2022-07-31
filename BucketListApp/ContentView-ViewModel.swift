@@ -16,6 +16,10 @@ extension ContentView {
         @Published var selectedPlace: Location?
         @Published var isUnlocked = false
         
+        @Published var showingAlert = false
+        @Published var alertTitle = ""
+        @Published var alertMessage = ""
+        
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
         
         init() {
@@ -48,11 +52,15 @@ extension ContentView {
                             self.isUnlocked = true
                         }
                     } else {
-                        
+                        self.alertTitle = "Authentication Failed"
+                        self.alertMessage = "Your biometric scan faild, please try again"
+                        self.showingAlert = true
                     }
                 }
             } else {
-                
+                self.alertTitle = "Invalid Device"
+                self.alertMessage = "Your device does not have biometrics, please enter your passcode"
+                self.showingAlert = true
             }
         }
         
